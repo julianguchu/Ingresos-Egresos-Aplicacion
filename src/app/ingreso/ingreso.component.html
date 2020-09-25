@@ -1,0 +1,31 @@
+<div class="container">
+<div class="row">
+	<div class="col-md-12">
+		<span class="text-success">INGRESO</span>
+	</div>
+
+</div>
+
+
+<div class="row">
+	<div class="col-md-12 ">
+		<table class=" table table-hover">
+			<tbody>
+					<tr  *ngFor="let ingreso  of arreglo" (click)="editar()">
+							<td><span>{{ingreso.descripcion}}</span></td>
+							<td><span  class="text-success">+{{ingreso.valor  | currency:"COP":"$":"1.2-2"}}</span> <button  (click)="eliminarIngreso(ingreso)"   class="close">x</button></td>
+
+					</tr>
+
+					
+
+			</tbody>
+
+
+		</table>
+
+	</div>
+
+</div>
+
+</div>
